@@ -24,17 +24,21 @@ export default defineEventHandler(async (event) => {
   let freq =
     income >= 15000
       ? 1
-      : data.IncomeFrequency == "No Income"
+      : data.IncomeFrequency == "No Income" ||
+        data.IncomeFrequency == "Sin ingresos"
       ? 1
-      : data.IncomeFrequency == "Weekly"
+      : data.IncomeFrequency == "Weekly" || data.IncomeFrequency == "Semanal"
       ? 52
-      : data.IncomeFrequency == "Bi-Weekly"
+      : data.IncomeFrequency == "Bi-Weekly" ||
+        data.IncomeFrequency == "Bisemanal"
       ? 26
-      : data.IncomeFrequency == "2 Times per Month"
+      : data.IncomeFrequency == "2 Times per Month" ||
+        data.IncomeFrequency == "2 veces al mes"
       ? 24
-      : data.IncomeFrequency == "Monthly"
+      : data.IncomeFrequency == "Monthly" || data.IncomeFrequency == "Mensual"
       ? 12
-      : data.IncomeFrequency == "Annually"
+      : data.IncomeFrequency == "Annually" ||
+        data.IncomeFrequency == "Anualmente"
       ? 1
       : 1;
   const fpl = (income * freq) / (size * 6430 + 11780);
