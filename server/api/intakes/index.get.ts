@@ -5,5 +5,5 @@ export default defineEventHandler(async (event) => {
   const query = getQuery(event);
   await ConnectDB();
   const apps = await IntakeModel.find(query);
-  return apps;
+  return "API Working";
 });

@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   // Get data from body
   const data = await readBody(event);
 
-  function hasNumbers(t) {
+  function hasNumbers(t: string) {
     var regex = /\d/g;
     return regex.test(t);
   }
@@ -41,7 +41,7 @@ export default defineEventHandler(async (event) => {
         data.IncomeFrequency == "Anualmente"
       ? 1
       : 1;
-  const fpl = (income * freq) / (size * 6430 + 11780);
+  const fpl = (income * freq) / (size * 5500 + 10150);
   const quint =
     fpl <= 0.5
       ? 1
