@@ -30,6 +30,7 @@ const schema: mongoose.Schema = new mongoose.Schema({
   Primary_Language: String,
   Referral: String,
   SecondChoiceSchool: String,
+  SecondChoiceSchoolID: String,
   Siblings: String,
   SiblingsInfo: String,
   State: String,
