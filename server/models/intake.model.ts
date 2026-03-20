@@ -44,6 +44,8 @@ const schema: mongoose.Schema = new mongoose.Schema({
   CalcQuintile: Number,
   Eligibility: String,
   SchoolYear: String,
+  IEP: String,
+  HomelessFoster: String,
 });
 
 // intake model
