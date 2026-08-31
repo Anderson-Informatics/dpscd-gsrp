@@ -4,5 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     MONGODB_URI: process.env.MONGODB_URI,
+    INTAKES_KEY: process.env.INTAKES_KEY,
   },
 });
