@@ -46,6 +46,12 @@ const schema: mongoose.Schema = new mongoose.Schema({
   SchoolYear: String,
   IEP: String,
   HomelessFoster: String,
+  Status: String,
+  Notes: String,
+  Teacher: String,
+  Classroom: String,
+  ContactDate: String,
+  ContactComments: String,
 });
 
 // intake model
